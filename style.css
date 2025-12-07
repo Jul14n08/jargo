@@ -542,3 +542,180 @@ html {
   background-color: #f7c600 !important; /* amarillo Jargo */
 }
 
+/* =========================
+   GALERÍA / CARRUSEL
+   ========================= */
+
+.gallery {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallery-main {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-slide {
+  width: 100%;
+  height: auto;
+  display: none;           /* se ocultan por defecto */
+  object-fit: cover;
+}
+
+.gallery-slide.active {
+  display: block;          /* solo se ve la activa */
+}
+
+/* Flechas izquierda / derecha */
+.gallery-arrow {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Miniaturas */
+.gallery-thumbs {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.gallery-thumb {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-thumb:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: var(--amarillo);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    gap: 0.5rem;
+  }
+
+  .gallery-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .gallery-thumb {
+    width: 60px;
+    height: 45px;
+  }
+}
+/* ====== GALERÍA CARRUSEL ====== */
+
+.gallery {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallery-main {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Ocultar todas por defecto */
+.gallery-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Solo se ve la que tiene .active */
+.gallery-slide.active {
+  display: block;
+}
+
+/* Flechas */
+.gallery-arrow {
+  background: #000000;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+.gallery-arrow:hover {
+  background: #333333;
+}
+
+/* Miniaturas */
+.gallery-thumbs {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.gallery-thumb {
+  width: 80px;
+  height: 55px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: #f7c600; /* amarillo Jargo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery-arrow {
+    position: static;
+  }
+}

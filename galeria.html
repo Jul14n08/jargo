@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -24,38 +24,72 @@
   <header class="header">
     <div class="container header-content">
       <div class="header-left">
-        <img
-          src="img/logo-jargo.png"
-          alt="Maquinaria e Ingeniería Jargo"
-          class="logo-img"
-        />
+        <img src="img/logo-jargo.png"
+             alt="Maquinaria e Ingeniería Jargo"
+             class="logo-img" />
       </div>
 
       <div class="header-right">
-        <img
-          src="img/logo-kaeser.png"
-          alt="Kaeser Compresores - Distribuidor Autorizado"
-          class="marcas-img"
-        />
+        <img src="img/logo-kaeser.png"
+             alt="Kaeser Compresores - Distribuidor Autorizado"
+             class="marcas-img" />
       </div>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- GALERÍA (SOLO UNA VEZ, SOBRE EL FONDO BLANCO) -->
   <section class="section">
-    <div class="container center">
-      <h2 class="section-title">GALERÍA</h2>
-      <p class="section-text">
-        Aquí más adelante puedes poner fotos de instalaciones, equipos, seminarios, etc.
+    <div class="container">
+
+      <h2 class="section-title center">GALERÍA</h2>
+      <p class="section-text center">
+        Conoce algunos de nuestros equipos, instalaciones y servicios.
       </p>
+
+      <!-- CARRUSEL -->
+      <div class="gallery">
+
+        <!-- Flecha izquierda -->
+        <button class="gallery-arrow gallery-prev" aria-label="Anterior">
+          &#10094;
+        </button>
+
+        <!-- Imagen principal -->
+        <div class="gallery-main">
+          <img src="galeria/galeria1.png" alt="Foto 1" class="gallery-slide active">
+          <img src="galeria/galeria2.png" alt="Foto 2" class="gallery-slide">
+          <img src="galeria/galeria3.png" alt="Foto 3" class="gallery-slide">
+          <img src="galeria/galeria4.png" alt="Foto 4" class="gallery-slide">
+          <img src="galeria/galeria5.png" alt="Foto 5" class="gallery-slide">
+        </div>
+
+        <!-- Flecha derecha -->
+        <button class="gallery-arrow gallery-next" aria-label="Siguiente">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Miniaturas -->
+      <div class="gallery-thumbs">
+        <img src="galeria/galeria1.png" alt="Miniatura 1"
+             class="gallery-thumb active" data-index="0">
+        <img src="galeria/galeria2.png" alt="Miniatura 2"
+             class="gallery-thumb" data-index="1">
+        <img src="galeria/galeria3.png" alt="Miniatura 3"
+             class="gallery-thumb" data-index="2">
+        <img src="galeria/galeria4.png" alt="Miniatura 4"
+             class="gallery-thumb" data-index="3">
+        <img src="galeria/galeria5.png" alt="Miniatura 5"
+             class="gallery-thumb" data-index="4">
+      </div>
+
     </div>
   </section>
 
-  <!-- CONTACTO / PIE DE PÁGINA (IGUAL AL INDEX) -->
+  <!-- CONTACTO / PIE DE PÁGINA (AMARILLO) -->
   <section id="contacto" class="contact-section">
     <div class="contact-container">
 
-      <!-- MENÚ SUPERIOR (INTERNO DEL FOOTER) -->
       <nav class="contact-menu">
         <a href="quienes-somos.html">QUIÉNES SOMOS</a>
         <a href="productos.html">PRODUCTOS Y SERVICIOS</a>
@@ -64,16 +98,11 @@
         <a href="index.html#contacto">CONTACTO</a>
       </nav>
 
-      <!-- INFO CENTRAL -->
       <div class="contact-info">
-        <a
-          href="https://www.linkedin.com/company/jargosas/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-icon"
-        >
-          in
-        </a>
+        <a href="https://www.linkedin.com/company/jargosas/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-icon">in</a>
 
         <h2 class="contact-title">
           MAQUINARIA E INGENIERÍA JARGO SAS
@@ -88,13 +117,11 @@
         </p>
       </div>
 
-      <!-- LÍNEA INFERIOR -->
       <div class="contact-bottom">
         <p class="contact-copy">
           Copyright © <span id="year"></span>
           MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
         </p>
-
         <a href="mailto:info@jargosas.com" class="contact-email">
           info@jargosas.com
         </a>
@@ -103,9 +130,45 @@
     </div>
   </section>
 
-  <!-- SCRIPT AÑO AUTOMÁTICO -->
+  <!-- SCRIPTS -->
   <script>
+    // Año automático
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ============ LÓGICA DEL CARRUSEL ============
+    const slides = document.querySelectorAll(".gallery-slide");
+    const thumbs = document.querySelectorAll(".gallery-thumb");
+    const prevBtn = document.querySelector(".gallery-prev");
+    const nextBtn = document.querySelector(".gallery-next");
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
+
+      slides.forEach(slide => slide.classList.remove("active"));
+      thumbs.forEach(thumb => thumb.classList.remove("active"));
+
+      slides[currentIndex].classList.add("active");
+      thumbs[currentIndex].classList.add("active");
+    }
+
+    prevBtn.addEventListener("click", () => {
+      showSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      showSlide(currentIndex + 1);
+    });
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const index = parseInt(thumb.dataset.index, 10);
+        showSlide(index);
+      });
+    });
   </script>
 
 </body>
