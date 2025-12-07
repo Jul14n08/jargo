@@ -14,12 +14,13 @@
   --gris-oscuro: #3a3a3a;
   --gris-texto: #555555;
   --amarillo: #f7c600;
-  --fondo: #f5f5f5;
+  --fondo: #f5f5f5; /* fondo general muy suave */
 }
 
 /* =========================
    BASE GENERAL
    ========================= */
+html,
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--gris-texto);
@@ -51,8 +52,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-menu a {
@@ -82,6 +81,12 @@ body {
   padding: 1.2rem 0;
 }
 
+.logo-img,
+.marcas-img {
+  max-height: 80px;
+}
+
+/* (por si usas estos textos en algún lado) */
 .empresa-subtitulo {
   font-size: 0.9rem;
   letter-spacing: 0.15em;
@@ -103,22 +108,13 @@ body {
   justify-content: flex-end;
 }
 
-.marca-tag {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  background-color: #111111;
-  color: #ffffff;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-}
-
 /* =========================
-   HERO (COMPRESORES...)
+   HERO INICIO (COMPRESORES...)
    ========================= */
 .hero {
   text-align: center;
   padding: 80px 0;
-  background-color: #f4f4f4;   /* gris muy claro */
+  background-color: #f4f4f4; /* gris muy claro */
 }
 
 .hero-title {
@@ -136,7 +132,7 @@ body {
 }
 
 /* =========================
-   BOTÓN PRIMARIO (GENERAL)
+   BOTÓN PRIMARIO
    ========================= */
 .btn-primario {
   display: inline-block;
@@ -145,7 +141,7 @@ body {
   color: #000000;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 6px;      /* Rectángulo con esquinas suaves */
+  border-radius: 6px;
   letter-spacing: 0.05em;
 }
 
@@ -158,7 +154,7 @@ body {
    ========================= */
 .section {
   padding: 3rem 0;
-  background-color: #ffffff;   /* blanco por defecto */
+  background-color: #ffffff; /* blanco por defecto */
 }
 
 .section-title {
@@ -174,24 +170,20 @@ body {
 }
 
 /* =========================
-   SECCIÓN BIENVENIDA
-   (dentro del bloque gris)
+   SECCIÓN BIENVENIDA (INICIO)
    ========================= */
-/* En tu HTML: <section class="section section-bienvenida"> */
 .section-bienvenida {
-  background-color: #f4f4f4;   /* mismo gris que el hero */
+  background-color: #f4f4f4; /* mismo gris que hero */
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
-/* Limitar ancho del texto en bienvenida */
 .section-bienvenida .section-text {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Botón centrado en bienvenida */
 .btn-bienvenida {
   display: block;
   width: fit-content;
@@ -203,43 +195,33 @@ body {
    ========================= */
 .section-alt {
   background-color: #f9fafb;             /* gris suave */
-  /* border-top: 6px solid #e5e5e5;  <-- ELIMINADO (era la línea gris) */
-  border-bottom: 8px solid var(--amarillo); /* franja amarilla abajo */
+  border-bottom: 8px solid var(--amarillo);
   padding: 3rem 0;
 }
 
-
-/* Contenedor un poco más ancho */
 .section-alt .container {
   width: 95%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Grid texto + imagen */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* mitad texto, mitad imagen */
+  grid-template-columns: 1fr 1fr;
   min-height: 480px;
   position: relative;
 }
 
-/* Columna de texto */
 .about-text {
   padding: 1rem 2rem 1rem 1rem;
 }
 
-/* Columna de imagen */
 .about-image {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
-/* Imagen llena toda la mitad derecha */
 .about-image img {
   position: absolute;
   top: 0;
@@ -249,7 +231,6 @@ body {
   object-fit: cover;
 }
 
-/* Subtítulos y lista */
 .about-subtitle {
   font-size: 1.2rem;
   margin-top: 1.5rem;
@@ -264,7 +245,124 @@ body {
 }
 
 /* =========================
-   SECCIÓN CONTACTO (AMARILLA)
+   PRODUCTOS Y SERVICIOS
+   ========================= */
+
+/* Main de productos: SIEMPRE blanco */
+.productos-main {
+  background-color: #ffffff;
+  padding: 0 0 3rem;
+}
+
+/* HERO de productos (imagen completa) */
+.ps-hero {
+  width: 100%;
+  background-color: #666363; /* por si tarda en cargar la imagen */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ps-hero-img {
+  display: block;
+  width: 100%;
+  max-width: 1920px; /* ancho máximo de la imagen real */
+  height: auto;
+}
+
+/* Grid general: 3 columnas (fila 1) */
+.ps-grid {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  text-align: center;
+}
+
+/* Fila 2: solo 2 productos */
+.ps-grid.ps-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+/* Tarjeta de producto */
+.ps-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ps-card img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+  background-color: #ffffff;
+}
+
+.ps-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.ps-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Banner alternativo (opcional) */
+.ps-banner {
+  width: 100%;
+  height: 300px;
+  background-image: url("img/imagen1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ps-banner-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+/* =========================
+   CLIENTES (LOGOS)
+   ========================= */
+.clientes-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.cliente-item img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: 0.3s ease;
+}
+
+.cliente-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* =========================
+   SECCIÓN CONTACTO / FOOTER
    ========================= */
 .contact-section {
   background-color: var(--amarillo);
@@ -278,7 +376,7 @@ body {
   text-align: center;
 }
 
-/* Menú superior dentro de contacto */
+/* Menú superior dentro del footer */
 .contact-menu {
   display: flex;
   flex-wrap: wrap;
@@ -293,32 +391,31 @@ body {
 .contact-menu a {
   text-decoration: none;
   color: #111111;
+  font-weight: 600;
 }
 
 .contact-menu a:hover {
   text-decoration: underline;
 }
 
-/* Icono de LinkedIn clickeable */
+/* Icono LinkedIn */
 .contact-icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 32px;
   height: 32px;
-  background-color: #000; /* Fondo negro sólido */
-  color: #fff;            /* Texto blanco */
-  border-radius: 50%;     /* Círculo perfecto */
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  border: none;
   margin-bottom: 20px;
 }
 
 .contact-icon:hover {
   background-color: #222;
-  cursor: pointer;
 }
 
 /* Texto central de contacto */
@@ -345,7 +442,7 @@ body {
   text-decoration: underline;
 }
 
-/* Línea inferior con copyright + email */
+/* Línea inferior copyright + email */
 .contact-bottom {
   display: flex;
   justify-content: space-between;
@@ -353,10 +450,19 @@ body {
   gap: 1rem;
   margin-top: 2.5rem;
   font-size: 0.9rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-copy,
+.contact-email {
+  color: #000;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .contact-email {
-  color: #111111;
   text-decoration: none;
 }
 
@@ -365,7 +471,7 @@ body {
 }
 
 /* =========================
-   FOOTER
+   FOOTER OSCURO (si lo llegas a usar)
    ========================= */
 .footer {
   background-color: #222222;
@@ -395,7 +501,7 @@ body {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;  /* texto arriba, imagen abajo */
+    grid-template-columns: 1fr;
     min-height: auto;
   }
 
@@ -417,133 +523,22 @@ body {
     gap: 1rem;
     font-size: 0.8rem;
   }
-}
 
-/* =========================
-   PRODUCTOS Y SERVICIOS
-   ========================= */
-
-/* Sección general de productos */
-.ps-grid {
-  max-width: 1100px;
-  margin: 3rem auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 3rem 2rem;                        /* espacio entre tarjetas */
-  text-align: center;
-}
-
-/* Fila 2: solo 2 productos, centrados */
-.ps-grid.ps-grid-2 {
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  justify-items: center;
-}
-
-/* Tarjeta de producto */
-.ps-card img {
-  width: 100%;
-  max-width: 260px;       /* controla tamaño máximo de la imagen */
-  height: auto;
-  margin: 0 auto 1rem;
-  display: block;
-}
-
-.ps-card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.ps-card p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Responsive: en pantallas más pequeñas */
-@media (max-width: 900px) {
+  /* Productos: 2 columnas en tablet */
   .ps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
+  /* Productos: 1 columna en móvil */
   .ps-grid,
   .ps-grid.ps-grid-2 {
     grid-template-columns: 1fr;
   }
 }
-
-/* ============================
-   BANNER ENTRE TÍTULO Y PRODUCTOS
-   ============================ */
-
-.ps-banner {
-    width: 100%;
-    height: 300px; /* ajusta según lo que necesites */
-    background-image: url("img/imagen1.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/* ===== OVERRIDES FINALES PARA EL FONDO ===== */
+html {
+  background-color: #f7c600 !important; /* amarillo Jargo */
 }
 
-.ps-banner-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    max-width: 900px;
-    padding: 0 20px;
-}
-
-/* HERO PRODUCTOS: imagen centrada siempre */
-.ps-hero {
-  width: 100%;
-  background-color: #666363;     /* por si tarda en cargar la imagen */
-  display: flex;              /* usamos flexbox para centrar */
-  justify-content: center;    /* centrado horizontal */
-}
-
-.ps-hero-img {
-  display: block;
-  width: 100%;         /* que se adapte hasta llenar el espacio disponible */
-  max-width: 1920px;   /* pon aquí el ancho real de tu imagen */
-  height: auto;
-}
-
-.ps-card {
-    text-align: center;        /* centra el texto */
-    display: flex;
-    flex-direction: column;
-    align-items: center;        /* centra la imagen */
-    justify-content: center;
-}
-
-.clientes-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.cliente-item img {
-    width: 140px;        /* Tamaño recomendado (ajustable) */
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(20%);  /* opcional: look elegante */
-    transition: 0.3s ease;
-}
-
-.cliente-item img:hover {
-    filter: grayscale(0%);   /* vuelve a color al pasar el mouse */
-    transform: scale(1.05);  /* pequeño zoom */
-}
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
