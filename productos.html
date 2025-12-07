@@ -41,6 +41,16 @@
     </div>
   </header>
 
+<!-- HERO CON IMAGEN COMPLETA -->
+<section class="ps-hero">
+  <img
+    src="img/imagen1.png" 
+    alt="Has llegado con los expertos en compresores de aire"
+    class="ps-hero-img"
+  />
+</section>
+
+
 
 
   <!-- GRID DE PRODUCTOS – FILA 1 -->
@@ -81,5 +91,62 @@
 
  
 
+</body>
+
+
+</html>
+
+<!-- CONTACTO / PIE DE PÁGINA -->
+  <section id="contacto" class="contact-section">
+    <div class="contact-container">
+
+      <!-- MENÚ SUPERIOR (INTERNO DEL FOOTER) -->
+      <nav class="contact-menu">
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+        <a href="productos.html">PRODUCTOS Y SERVICIOS</a>
+        <a href="clientes.html">NUESTROS CLIENTES</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="index.html#contacto">CONTACTO</a>
+      </nav>
+
+      <!-- INFO CENTRAL -->
+      <div class="contact-info">
+        <a href="https://www.linkedin.com/company/jargosas/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="contact-icon">
+          in
+        </a>
+
+        <h2 class="contact-title">
+          MAQUINARIA E INGENIERÍA JARGO SAS
+        </h2>
+
+        <p class="contact-text">
+          Calle 22 a No. 83 - 61, Et. 4 - Int. 28, Modelia - Bogotá D.C, Colombia
+        </p>
+
+        <p class="contact-text">
+          ¡Llámanos! <a href="tel:+573202894894">+57 3202894894</a>
+        </p>
+      </div>
+
+      <!-- LÍNEA INFERIOR -->
+      <div class="contact-bottom">
+        <p class="contact-copy">
+          Copyright © <span id="year"></span> MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
+        </p>
+
+        <a href="mailto:info@jargosas.com" class="contact-email">
+          info@jargosas.com
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

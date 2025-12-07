@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuestros Clientes – JARGO SAS</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes somos – Maquinaria e Ingeniería Jargo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -18,11 +18,25 @@
   </ul>
 </nav>
 
+
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-content">
-      <div>
-        <div class="empresa-subtitulo">MAQUINARIA E INGENIERÍA</div>
-        <div class="empresa-nombre">JARGO</div>
+      <div class="header-left">
+        <img
+          src="img/logo-jargo.png"
+          alt="Maquinaria e Ingeniería Jargo"
+          class="logo-img"
+        />
+      </div>
+
+      <div class="header-right">
+        <img
+          src="img/logo-kaeser.png"
+          alt="Kaeser Compresores - Distribuidor Autorizado"
+          class="marcas-img"
+        />
       </div>
     </div>
   </header>
@@ -31,14 +45,85 @@
     <div class="container center">
       <h2 class="section-title">NUESTROS CLIENTES</h2>
       <p class="section-text">
-        Aquí más adelante puedes listar logos, testimonios o casos de éxito de tus clientes.
+       
       </p>
+      <div class="clientes-grid">
+    <div class="cliente-item">
+        <img src="logos/banco.png" alt="Cliente 1">
+    </div>
+    <div class="cliente-item">
+        <img src="logos/bimbo.jpeg"Cliente 2">
+    </div>
+    <div class="cliente-item">
+        <img src="logos/javeriana.jpeg" alt="Cliente 3">
+    </div>
+    <div class="cliente-item">
+        <img src="logos/pomar.jpeg" alt="Cliente 4">
+    </div>
+    <div class="cliente-item">
+        <img src="logos/Uandes.png" alt="Cliente 5">
+    </div>
+</div>
+
     </div>
   </section>
 
-  <footer class="footer">
-    <p>Copyright © 2024 MAQUINARIA E INGENIERÍA JARGO SAS – Todos los derechos reservados.</p>
+
   </footer>
 
+</body>
+</html>
+<!-- CONTACTO / PIE DE PÁGINA -->
+  <section id="contacto" class="contact-section">
+    <div class="contact-container">
+
+      <!-- MENÚ SUPERIOR (INTERNO DEL FOOTER) -->
+      <nav class="contact-menu">
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+        <a href="productos.html">PRODUCTOS Y SERVICIOS</a>
+        <a href="clientes.html">NUESTROS CLIENTES</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="index.html#contacto">CONTACTO</a>
+      </nav>
+
+      <!-- INFO CENTRAL -->
+      <div class="contact-info">
+        <a href="https://www.linkedin.com/company/jargosas/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="contact-icon">
+          in
+        </a>
+
+        <h2 class="contact-title">
+          MAQUINARIA E INGENIERÍA JARGO SAS
+        </h2>
+
+        <p class="contact-text">
+          Calle 22 a No. 83 - 61, Et. 4 - Int. 28, Modelia - Bogotá D.C, Colombia
+        </p>
+
+        <p class="contact-text">
+          ¡Llámanos! <a href="tel:+573202894894">+57 3202894894</a>
+        </p>
+      </div>
+
+      <!-- LÍNEA INFERIOR -->
+      <div class="contact-bottom">
+        <p class="contact-copy">
+          Copyright © <span id="year"></span> MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
+        </p>
+
+        <a href="mailto:info@jargosas.com" class="contact-email">
+          info@jargosas.com
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
