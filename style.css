@@ -418,3 +418,58 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/* =========================
+   PRODUCTOS Y SERVICIOS
+   ========================= */
+
+/* Sección general de productos */
+.ps-grid {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 3rem 2rem;                        /* espacio entre tarjetas */
+  text-align: center;
+}
+
+/* Fila 2: solo 2 productos, centrados */
+.ps-grid.ps-grid-2 {
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  justify-items: center;
+}
+
+/* Tarjeta de producto */
+.ps-card img {
+  width: 100%;
+  max-width: 260px;       /* controla tamaño máximo de la imagen */
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.ps-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.ps-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive: en pantallas más pequeñas */
+@media (max-width: 900px) {
+  .ps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ps-grid,
+  .ps-grid.ps-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
