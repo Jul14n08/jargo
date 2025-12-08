@@ -24,63 +24,128 @@
   <header class="header">
     <div class="container header-content">
       <div class="header-left">
-        <img src="img/logo-jargo.png"
-             alt="Maquinaria e Ingeniería Jargo"
-             class="logo-img" />
+        <img
+          src="img/logo-jargo.png"
+          alt="Maquinaria e Ingeniería Jargo"
+          class="logo-img"
+        />
       </div>
 
       <div class="header-right">
-        <img src="img/logo-kaeser.png"
-             alt="Kaeser Compresores - Distribuidor Autorizado"
-             class="marcas-img" />
+        <img
+          src="img/logo-kaeser.png"
+          alt="Kaeser Compresores - Distribuidor Autorizado"
+          class="marcas-img"
+        />
       </div>
     </div>
   </header>
 
-  <!-- GALERÍA (SOLO UNA VEZ, SOBRE EL FONDO BLANCO) -->
+  <!-- GALERÍA -->
   <section class="section">
     <div class="container">
 
       <h2 class="section-title center">GALERÍA</h2>
       <p class="section-text center">
-        Conoce algunos de nuestros equipos, instalaciones y servicios.
+        Conoce algunos de nuestros equipos, oficinas y colaboradores.
       </p>
 
-      <!-- CARRUSEL -->
-      <div class="gallery">
+      <!-- =======================
+           SECCIÓN 1: EQUIPOS
+           ======================= -->
+      <h3 class="gallery-section-title">Equipos</h3>
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <button class="gallery-arrow gallery-prev" aria-label="Anterior">&#10094;</button>
 
-        <!-- Flecha izquierda -->
-        <button class="gallery-arrow gallery-prev" aria-label="Anterior">
-          &#10094;
-        </button>
+          <div class="gallery-main">
+            <img src="equipos/equipo1.png" alt="Equipo 1" class="gallery-slide active">
+            <img src="equipos/equipo2.png" alt="Equipo 2" class="gallery-slide">
+            <img src="equipos/equipo3.png" alt="Equipo 3" class="gallery-slide">
+            <img src="equipos/equipo4.png" alt="Equipo 4" class="gallery-slide">
+            <img src="equipos/equipo5.png" alt="Equipo 5" class="gallery-slide">
+          </div>
 
-        <!-- Imagen principal -->
-        <div class="gallery-main">
-          <img src="galeria/galeria1.png" alt="Foto 1" class="gallery-slide active">
-          <img src="galeria/galeria2.png" alt="Foto 2" class="gallery-slide">
-          <img src="galeria/galeria3.png" alt="Foto 3" class="gallery-slide">
-          <img src="galeria/galeria4.png" alt="Foto 4" class="gallery-slide">
-          <img src="galeria/galeria5.png" alt="Foto 5" class="gallery-slide">
+          <button class="gallery-arrow gallery-next" aria-label="Siguiente">&#10095;</button>
         </div>
 
-        <!-- Flecha derecha -->
-        <button class="gallery-arrow gallery-next" aria-label="Siguiente">
-          &#10095;
-        </button>
+        <div class="gallery-thumbs">
+          <img src="equipos/equipo1.png" alt="Equipo 1" class="gallery-thumb active">
+          <img src="equipos/equipo2.png" alt="Equipo 2" class="gallery-thumb">
+          <img src="equipos/equipo3.png" alt="Equipo 3" class="gallery-thumb">
+          <img src="equipos/equipo4.png" alt="Equipo 4" class="gallery-thumb">
+          <img src="equipos/equipo5.png" alt="Equipo 5" class="gallery-thumb">
+        </div>
       </div>
 
-      <!-- Miniaturas -->
-      <div class="gallery-thumbs">
-        <img src="galeria/galeria1.png" alt="Miniatura 1"
-             class="gallery-thumb active" data-index="0">
-        <img src="galeria/galeria2.png" alt="Miniatura 2"
-             class="gallery-thumb" data-index="1">
-        <img src="galeria/galeria3.png" alt="Miniatura 3"
-             class="gallery-thumb" data-index="2">
-        <img src="galeria/galeria4.png" alt="Miniatura 4"
-             class="gallery-thumb" data-index="3">
-        <img src="galeria/galeria5.png" alt="Miniatura 5"
-             class="gallery-thumb" data-index="4">
+      <!-- =======================
+           SECCIÓN 2: OFICINA
+           ======================= -->
+      <h3 class="gallery-section-title">Oficina</h3>
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <button class="gallery-arrow gallery-prev" aria-label="Anterior">&#10094;</button>
+
+          <div class="gallery-main">
+            <img src="oficina/oficina1.jpeg" alt="Oficina 1" class="gallery-slide active">
+            <img src="oficina/oficina2.jpeg" alt="Oficina 2" class="gallery-slide">
+            <img src="oficina/oficina3.jpeg" alt="Oficina 3" class="gallery-slide">
+          </div>
+
+          <button class="gallery-arrow gallery-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+
+        <div class="gallery-thumbs">
+          <img src="oficina/oficina1.jpeg" alt="Oficina 1" class="gallery-thumb active">
+          <img src="oficina/oficina2.jpeg" alt="Oficina 2" class="gallery-thumb">
+          <img src="oficina/oficina3.jpeg" alt="Oficina 3" class="gallery-thumb">
+        </div>
+      </div>
+
+      <!-- =======================
+           SECCIÓN 3: EMPLEADOS
+           ======================= -->
+      <h3 class="gallery-section-title">Empleados</h3>
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <button class="gallery-arrow gallery-prev" aria-label="Anterior">&#10094;</button>
+
+          <div class="gallery-main">
+            <img src="empleados/empleado1.png" alt="Empleado 1" class="gallery-slide active">
+            <img src="empleados/empleado2.png" alt="Empleado 2" class="gallery-slide">
+            <img src="empleados/empleado3.png" alt="Empleado 3" class="gallery-slide">
+          </div>
+
+          <button class="gallery-arrow gallery-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+
+        <div class="gallery-thumbs">
+          <img src="empleados/empleado1.png" alt="Empleado 1" class="gallery-thumb active">
+          <img src="empleados/empleado2.png" alt="Empleado 2" class="gallery-thumb">
+          <img src="empleados/empleado3.png" alt="Empleado 3" class="gallery-thumb">
+        </div>
+      </div>
+
+      <!-- =======================
+           SECCIÓN 4: DESPEDIDA
+           ======================= -->
+      <h3 class="gallery-section-title">Despedidas</h3>
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <button class="gallery-arrow gallery-prev" aria-label="Anterior">&#10094;</button>
+
+          <div class="gallery-main">
+            <img src="despedida/despedida1.png" alt="Despedida 1" class="gallery-slide active">
+            <img src="despedida/despedida2.png" alt="Despedida 2" class="gallery-slide">
+          </div>
+
+          <button class="gallery-arrow gallery-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+
+        <div class="gallery-thumbs">
+          <img src="despedida/despedida1.png" alt="Despedida 1" class="gallery-thumb active">
+          <img src="despedida/despedida2.png" alt="Despedida 2" class="gallery-thumb">
+        </div>
       </div>
 
     </div>
@@ -99,10 +164,14 @@
       </nav>
 
       <div class="contact-info">
-        <a href="https://www.linkedin.com/company/jargosas/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="contact-icon">in</a>
+        <a
+          href="https://www.linkedin.com/company/jargosas/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-icon"
+        >
+          in
+        </a>
 
         <h2 class="contact-title">
           MAQUINARIA E INGENIERÍA JARGO SAS
@@ -122,6 +191,7 @@
           Copyright © <span id="year"></span>
           MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
         </p>
+
         <a href="mailto:info@jargosas.com" class="contact-email">
           info@jargosas.com
         </a>
@@ -133,41 +203,47 @@
   <!-- SCRIPTS -->
   <script>
     // Año automático
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // ============ LÓGICA DEL CARRUSEL ============
-    const slides = document.querySelectorAll(".gallery-slide");
-    const thumbs = document.querySelectorAll(".gallery-thumb");
-    const prevBtn = document.querySelector(".gallery-prev");
-    const nextBtn = document.querySelector(".gallery-next");
-
-    let currentIndex = 0;
-
-    function showSlide(index) {
-      if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
-      currentIndex = index;
-
-      slides.forEach(slide => slide.classList.remove("active"));
-      thumbs.forEach(thumb => thumb.classList.remove("active"));
-
-      slides[currentIndex].classList.add("active");
-      thumbs[currentIndex].classList.add("active");
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
     }
 
-    prevBtn.addEventListener("click", () => {
-      showSlide(currentIndex - 1);
-    });
+    // ========= CARRUSELES DE GALERÍA =========
+    document.querySelectorAll(".gallery-wrapper").forEach(wrapper => {
+      const slides = wrapper.querySelectorAll(".gallery-slide");
+      const thumbs = wrapper.querySelectorAll(".gallery-thumb");
+      const prevBtn = wrapper.querySelector(".gallery-prev");
+      const nextBtn = wrapper.querySelector(".gallery-next");
 
-    nextBtn.addEventListener("click", () => {
-      showSlide(currentIndex + 1);
-    });
+      let currentIndex = 0;
 
-    thumbs.forEach(thumb => {
-      thumb.addEventListener("click", () => {
-        const index = parseInt(thumb.dataset.index, 10);
-        showSlide(index);
+      function showSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
+
+        slides.forEach(s => s.classList.remove("active"));
+        thumbs.forEach(t => t.classList.remove("active"));
+
+        slides[currentIndex].classList.add("active");
+        if (thumbs[currentIndex]) {
+          thumbs[currentIndex].classList.add("active");
+        }
+      }
+
+      // Botones
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener("click", () => showSlide(currentIndex - 1));
+        nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
+      }
+
+      // Miniaturas
+      thumbs.forEach((thumb, i) => {
+        thumb.addEventListener("click", () => showSlide(i));
       });
+
+      // Arrancar en la primera
+      showSlide(0);
     });
   </script>
 
