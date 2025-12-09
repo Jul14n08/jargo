@@ -14,7 +14,7 @@
   --gris-oscuro: #3a3a3a;
   --gris-texto: #555555;
   --amarillo: #f7c600;
-  --fondo: #f5f5f5; /* fondo general muy suave */
+  --fondo: #f5f5f5;
 }
 
 /* =========================
@@ -26,6 +26,11 @@ body {
   color: var(--gris-texto);
   background-color: var(--fondo);
   line-height: 1.6;
+}
+
+/* Amarillo de fondo general del sitio */
+html {
+  background-color: #f7c600 !important;
 }
 
 .container {
@@ -86,7 +91,6 @@ body {
   max-height: 80px;
 }
 
-/* (por si usas estos textos en algún lado) */
 .empresa-subtitulo {
   font-size: 0.9rem;
   letter-spacing: 0.15em;
@@ -109,12 +113,12 @@ body {
 }
 
 /* =========================
-   HERO INICIO (COMPRESORES...)
+   HERO INICIO
    ========================= */
 .hero {
   text-align: center;
   padding: 80px 0;
-  background-color: #f4f4f4; /* gris muy claro */
+  background-color: #f4f4f4;
 }
 
 .hero-title {
@@ -154,7 +158,7 @@ body {
    ========================= */
 .section {
   padding: 3rem 0;
-  background-color: #ffffff; /* blanco por defecto */
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -170,10 +174,10 @@ body {
 }
 
 /* =========================
-   SECCIÓN BIENVENIDA (INICIO)
+   SECCIÓN BIENVENIDA
    ========================= */
 .section-bienvenida {
-  background-color: #f4f4f4; /* mismo gris que hero */
+  background-color: #f4f4f4;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
@@ -191,10 +195,10 @@ body {
 }
 
 /* =========================
-   SECCIÓN MISIÓN / VISIÓN / VALORES
+   MISIÓN / VISIÓN / VALORES
    ========================= */
 .section-alt {
-  background-color: #f9fafb;             /* gris suave */
+  background-color: #f9fafb;
   border-bottom: 8px solid var(--amarillo);
   padding: 3rem 0;
 }
@@ -247,17 +251,14 @@ body {
 /* =========================
    PRODUCTOS Y SERVICIOS
    ========================= */
-
-/* Main de productos: SIEMPRE blanco */
 .productos-main {
   background-color: #ffffff;
   padding: 0 0 3rem;
 }
 
-/* HERO de productos (imagen completa) */
 .ps-hero {
   width: 100%;
-  background-color: #666363; /* por si tarda en cargar la imagen */
+  background-color: #666363;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -266,11 +267,10 @@ body {
 .ps-hero-img {
   display: block;
   width: 100%;
-  max-width: 1920px; /* ancho máximo de la imagen real */
+  max-width: 1920px;
   height: auto;
 }
 
-/* Grid general: 3 columnas (fila 1) */
 .ps-grid {
   max-width: 1100px;
   margin: 3rem auto;
@@ -286,7 +286,6 @@ body {
   justify-items: center;
 }
 
-/* Tarjeta de producto */
 .ps-card {
   display: flex;
   flex-direction: column;
@@ -314,7 +313,6 @@ body {
   color: #555;
 }
 
-/* Banner alternativo (opcional) */
 .ps-banner {
   width: 100%;
   height: 300px;
@@ -362,282 +360,17 @@ body {
 }
 
 /* =========================
-   SECCIÓN CONTACTO / FOOTER
-   ========================= */
-.contact-section {
-  background-color: var(--amarillo);
-  color: #111111;
-  padding: 3rem 0 2.5rem;
-}
-
-.contact-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Menú superior dentro del footer */
-.contact-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-}
-
-.contact-menu a {
-  text-decoration: none;
-  color: #111111;
-  font-weight: 600;
-}
-
-.contact-menu a:hover {
-  text-decoration: underline;
-}
-
-/* Icono LinkedIn */
-.contact-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-
-.contact-icon:hover {
-  background-color: #222;
-}
-
-/* Texto central de contacto */
-.contact-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-}
-
-.contact-text {
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-}
-
-.contact-text a {
-  color: #111111;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-text a:hover {
-  text-decoration: underline;
-}
-
-/* Línea inferior copyright + email */
-.contact-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  font-size: 0.9rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-copy,
-.contact-email {
-  color: #000;
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.contact-email {
-  text-decoration: none;
-}
-
-.contact-email:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   FOOTER OSCURO (si lo llegas a usar)
-   ========================= */
-.footer {
-  background-color: #222222;
-  color: #dddddd;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 2rem;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 900px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .empresa-nombre {
-    font-size: 1.9rem;
-  }
-
-  .hero-title {
-    font-size: 1.4rem;
-    letter-spacing: 0.2em;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .about-image {
-    position: relative;
-    height: 260px;
-  }
-
-  .about-image img {
-    position: absolute;
-  }
-
-  .contact-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-menu {
-    gap: 1rem;
-    font-size: 0.8rem;
-  }
-
-  /* Productos: 2 columnas en tablet */
-  .ps-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  /* Productos: 1 columna en móvil */
-  .ps-grid,
-  .ps-grid.ps-grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===== OVERRIDES FINALES PARA EL FONDO ===== */
-html {
-  background-color: #f7c600 !important; /* amarillo Jargo */
-}
-
-/* =========================
    GALERÍA / CARRUSEL
    ========================= */
-
-.gallery {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.gallery-section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.2rem;
+  color: var(--gris-oscuro);
 }
-
-.gallery-main {
-  flex: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.gallery-slide {
-  width: 100%;
-  height: auto;
-  display: none;           /* se ocultan por defecto */
-  object-fit: cover;
-}
-
-.gallery-slide.active {
-  display: block;          /* solo se ve la activa */
-}
-
-/* Flechas izquierda / derecha */
-.gallery-arrow {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Miniaturas */
-.gallery-thumbs {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.gallery-thumb {
-  width: 70px;
-  height: 50px;
-  object-fit: cover;
-  cursor: pointer;
-  opacity: 0.6;
-  border: 2px solid transparent;
-  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.gallery-thumb:hover {
-  opacity: 0.9;
-  transform: scale(1.03);
-}
-
-.gallery-thumb.active {
-  opacity: 1;
-  border-color: var(--amarillo);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .gallery {
-    gap: 0.5rem;
-  }
-
-  .gallery-arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-
-  .gallery-thumb {
-    width: 60px;
-    height: 45px;
-  }
-}
-/* ====== GALERÍA CARRUSEL ====== */
 
 .gallery {
   position: relative;
@@ -679,6 +412,7 @@ html {
   cursor: pointer;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 20px;
+  color: #fff;
 }
 
 .gallery-arrow:hover {
@@ -706,10 +440,10 @@ html {
 
 .gallery-thumb.active {
   opacity: 1;
-  border-color: #f7c600; /* amarillo Jargo */
+  border-color: var(--amarillo);
 }
 
-/* Responsive */
+/* Responsive galería */
 @media (max-width: 768px) {
   .gallery {
     flex-direction: column;
@@ -718,21 +452,121 @@ html {
   .gallery-arrow {
     position: static;
   }
-}
-.gallery-section-title {
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 1.2rem;
-  color: var(--gris-oscuro);
+
+  .gallery-thumb {
+    width: 60px;
+    height: 45px;
+  }
 }
 
 /* =========================
-   PÁGINA DE CONTACTO
+   SECCIÓN CONTACTO / FOOTER
    ========================= */
+.contact-section {
+  background-color: var(--amarillo);
+  color: #111111;
+  padding: 3rem 0 2.5rem;
+}
 
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.contact-menu a {
+  text-decoration: none;
+  color: #111111;
+  font-weight: 600;
+}
+
+.contact-menu a:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.contact-icon:hover {
+  background-color: #222;
+}
+
+.contact-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.contact-text {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.contact-text a {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+.contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-copy,
+.contact-email {
+  color: #000;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.contact-email {
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   PÁGINA DE CONTACTO (FORM)
+   ========================= */
 .contacto-grid {
   margin-top: 2.5rem;
   display: grid;
@@ -741,39 +575,76 @@ html {
   align-items: flex-start;
 }
 
-/* Columna izquierda: formulario */
-.contacto-form label {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--gris-oscuro);
-  margin-bottom: 0.35rem;
+/* Cada campo (label + input/textarea + error) */
+.campo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;  /* campo a la izquierda, error a la derecha */
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "label label"
+    "control error";
+  column-gap: 12px;
+  row-gap: 6px;
+  margin-bottom: 22px;
 }
 
-.contacto-form input,
-.contacto-form textarea {
+/* Label ocupa toda la fila superior */
+.campo label {
+  grid-area: label;
+  font-size: 0.9rem;
+  color: var(--gris-oscuro);
+}
+
+/* Input / textarea en la celda de control */
+.campo input,
+.campo textarea {
+  grid-area: control;
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 4px;
   border: 1px solid #d3d3d3;
   font-size: 1rem;
-  margin-bottom: 1.2rem;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   background-color: #fff;
 }
 
+/* Contenedor del campo */
+.campo {
+  margin-bottom: 18px;
+}
+
+/* Errores debajo del campo */
+.error {
+  color: #d00000;
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
+}
+/* 🔥 SOLO afecta al error del textarea */
+.campo textarea + .error {
+  position: relative !important;   /* lo saca del overlay a la derecha */
+  top: 6px !important;             /* lo baja un poquito */
+  right: 0 !important;             /* lo alinea a la izquierda */
+  white-space: normal !important;  /* permite saltos de línea */
+  display: block !important;       /* lo coloca debajo */
+  text-align: left !important;
+}
+
+/* Borde rojo cuando hay error */
+.input-error {
+  border: 2px solid #d00000 !important;
+}
+
+/* Borde amarillo al hacer foco */
 .contacto-form input:focus,
 .contacto-form textarea:focus {
   border-color: #f7c600;
   box-shadow: 0 0 0 2px rgba(247, 198, 0, 0.25);
 }
 
-.contacto-form textarea {
-  min-height: 190px;
-  resize: vertical;
-}
 
-/* Botón ENVIAR grande y amarillo */
+/* Botón ENVIAR */
 .contacto-form .btn-primario {
   width: 100%;
   padding: 1rem 2rem;
@@ -784,7 +655,7 @@ html {
   cursor: pointer;
 }
 
-/* Columna derecha: info de contacto */
+/* Columna derecha info */
 .contacto-info h3 {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
@@ -810,7 +681,7 @@ html {
   text-decoration: underline;
 }
 
-/* Botón de WhatsApp tipo barra (opcional) */
+/* botón WhatsApp en columna derecha (si lo usas) */
 .contacto-info .wa-btn {
   display: inline-flex;
   align-items: center;
@@ -833,7 +704,7 @@ html {
   filter: brightness(1.05);
 }
 
-/* Botón flotante redondo (si quieres seguir usándolo) */
+/* botón flotante WhatsApp */
 .whatsapp-btn {
   position: fixed;
   right: 20px;
@@ -852,11 +723,11 @@ html {
   object-fit: cover;
 }
 
-/* Popup de éxito */
+/* Popup de éxito (por si lo usas) */
 .popup {
   position: fixed;
   inset: 0;
-  display: none;           /* se activa con JS */
+  display: none;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.45);
@@ -886,9 +757,69 @@ html {
   cursor: pointer;
 }
 
-/* Responsive */
+/* =========================
+   FOOTER OSCURO OPCIONAL
+   ========================= */
+.footer {
+  background-color: #222222;
+  color: #dddddd;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+/* =========================
+   RESPONSIVE GENERAL
+   ========================= */
 @media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .empresa-nombre {
+    font-size: 1.9rem;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .about-image {
+    position: relative;
+    height: 260px;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-menu {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .ps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contacto-grid {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .ps-grid,
+  .ps-grid.ps-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+ 
