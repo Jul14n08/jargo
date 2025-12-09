@@ -1,43 +1,160 @@
+dame todo el html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiénes somos – Maquinaria e Ingeniería Jargo</title>
+  <title>Contacto – Maquinaria e Ingeniería Jargo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<nav class="navbar">
-  <ul class="nav-menu">
-    <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
-    <li><a href="productos.html">PRODUCTOS Y SERVICIOS</a></li>
-    <li><a href="clientes.html">NUESTROS CLIENTES</a></li>
-    <li><a href="galeria.html">GALERÍA</a></li>
-    <li><a href="#contacto">CONTACTO</a></li>  <!-- este sí se queda con # porque está en esta misma página -->
-  </ul>
-</nav>
-
-
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+      <li><a href="productos.html">PRODUCTOS Y SERVICIOS</a></li>
+      <li><a href="clientes.html">NUESTROS CLIENTES</a></li>
+      <li><a href="galeria.html">GALERÍA</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header-content">
       <div class="header-left">
-        <img
-          src="img/logo-jargo.png"
-          alt="Maquinaria e Ingeniería Jargo"
-          class="logo-img"
-        />
+        <img src="img/logo-jargo.png"
+             alt="Maquinaria e Ingeniería Jargo"
+             class="logo-img">
       </div>
 
       <div class="header-right">
-        <img
-          src="img/logo-kaeser.png"
-          alt="Kaeser Compresores - Distribuidor Autorizado"
-          class="marcas-img"
-        />
+        <img src="img/logo-kaeser.png"
+             alt="Kaeser Compresores"
+             class="marcas-img">
       </div>
     </div>
   </header>
-  
+
+  <!-- SECCIÓN CONTACTO -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title center">Hablemos</h2>
+      <p class="section-text center">
+        Cuéntanos qué necesitas y te contactaremos lo antes posible.
+      </p>
+
+      <div class="contacto-grid">
+
+                <!-- FORMULARIO (FormSubmit) -->
+        <form class="contacto-form"
+            action="https://formsubmit.co/alphaparasite95@gmail.com"
+            method="POST">
+
+
+          <label>Nombre completo</label>
+          <input type="text" name="nombre" placeholder="Nombre" required />
+
+          <label>Correo electrónico</label>
+          <input type="email" name="correo" placeholder="correo electrónico" required />
+
+          <label>Mensaje</label>
+          <textarea name="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
+
+          <!-- Config extra de FormSubmit -->
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde la web JARGO">
+          <input type="hidden" name="_captcha" value="false">
+      
+
+          <button type="submit" class="btn-primario">Enviar mensaje</button>
+        </form>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contacto-info">
+          <h3>MAQUINARIA E INGENIERÍA JARGO SAS</h3>
+
+          <p>
+            Calle 22A No. 83 – 61, Et. 4 – Int. 28<br>
+            Modelia – Bogotá D.C, Colombia
+          </p>
+
+          <p>
+            <strong>Teléfono:</strong>
+            <a href="tel:+573202894894">+57 320 289 4894</a>
+          </p>
+
+          <p>
+            <strong>Correo:</strong>
+            <a href="mailto:info@jargosas.com">info@jargosas.com</a>
+          </p>
+
+          <p>
+            <strong>Horario:</strong>
+            Lunes a Viernes, 8:00 am – 5:00 pm
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section>
+    <iframe 
+      width="100%" 
+      height="500" 
+      frameborder="0" 
+      scrolling="no"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-74.1345%2C4.6620%2C-74.1230%2C4.6695&layer=mapnik&marker=4.665782%2C-74.128768">
+    </iframe>
+  </section>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/573202894894"
+     target="_blank"
+     class="whatsapp-btn">
+    <img src="img/whatsapp.jpeg" alt="WhatsApp">
+  </a>
+
+  <!-- FOOTER -->
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <nav class="contact-menu">
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+        <a href="productos.html">PRODUCTOS Y SERVICIOS</a>
+        <a href="clientes.html">NUESTROS CLIENTES</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="contact-info">
+        <a href="https://www.linkedin.com/company/jargosas/" target="_blank" class="contact-icon">in</a>
+
+        <h2 class="contact-title">MAQUINARIA E INGENIERÍA JARGO SAS</h2>
+        <p class="contact-text">Calle 22 a No. 83 - 61, Et. 4 - Int. 28, Modelia - Bogotá D.C</p>
+        <p class="contact-text">¡Llámanos! <a href="tel:+573202894894">+57 3202894894</a></p>
+      </div>
+
+      <div class="contact-bottom">
+        <p class="contact-copy">
+          Copyright © <span id="year"></span>
+          MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
+        </p>
+        <a href="mailto:info@jargosas.com" class="contact-email">info@jargosas.com</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
