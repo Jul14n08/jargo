@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu mensaje – JARGO</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Estilos de la página de gracias (puedes ajustarlos si deseas) */
+    .gracias-container {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .gracias-container h1 {
+      font-size: 2.8rem;
+      color: #1a1a1a;
+    }
+
+    .gracias-container p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      color: #444;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #e6b800;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-volver:hover {
+      background: #d4a300;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+      <li><a href="productos.html">PRODUCTOS Y SERVICIOS</a></li>
+      <li><a href="clientes.html">NUESTROS CLIENTES</a></li>
+      <li><a href="galeria.html">GALERÍA</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <img src="img/logo-jargo.png"
+             alt="Maquinaria e Ingeniería Jargo"
+             class="logo-img">
+      </div>
+
+      <div class="header-right">
+        <img src="img/logo-kaeser.png"
+             alt="Kaeser Compresores"
+             class="marcas-img">
+      </div>
+    </div>
+  </header>
+
+
+  <!-- CONTENIDO -->
+  <div class="gracias-container">
+    <h1>¡Gracias por contactarnos!</h1>
+    <p>Hemos recibido tu mensaje.</p>
+    <p>Nos comunicaremos contigo lo más pronto posible.</p>
+
+    <a href="quienes-somos.html" class="btn-volver">Volver al inicio</a>
+  </div>
+
+  <!-- FOOTER -->
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <nav class="contact-menu">
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+        <a href="productos.html">PRODUCTOS Y SERVICIOS</a>
+        <a href="clientes.html">NUESTROS CLIENTES</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="contact-info">
+        <a href="https://www.linkedin.com/company/jargosas/" target="_blank" class="contact-icon">in</a>
+
+        <h2 class="contact-title">MAQUINARIA E INGENIERÍA JARGO SAS</h2>
+        <p class="contact-text">Calle 22 a No. 83 - 61, Et. 4 - Int. 28, Modelia - Bogotá D.C</p>
+        <p class="contact-text">¡Llámanos! <a href="tel:+573202894894">+57 3202894894</a></p>
+      </div>
+
+      <div class="contact-bottom">
+        <p class="contact-copy">
+          Copyright © <span id="year"></span>
+          MAQUINARIA E INGENIERÍA JARGO SAS - Todos los derechos reservados.
+        </p>
+        <a href="mailto:info@jargosas.com" class="contact-email">info@jargosas.com</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
