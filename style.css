@@ -575,30 +575,24 @@ html {
   align-items: flex-start;
 }
 
-/* Cada campo (label + input/textarea + error) */
+/* Contenedor de cada campo */
 .campo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;  /* campo a la izquierda, error a la derecha */
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "label label"
-    "control error";
-  column-gap: 12px;
-  row-gap: 6px;
+  position: relative;
   margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Label ocupa toda la fila superior */
+/* Label */
 .campo label {
-  grid-area: label;
   font-size: 0.9rem;
   color: var(--gris-oscuro);
+  margin-bottom: 4px;
 }
 
-/* Input / textarea en la celda de control */
+/* Input / textarea */
 .campo input,
 .campo textarea {
-  grid-area: control;
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 4px;
@@ -607,42 +601,14 @@ html {
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   background-color: #fff;
+  margin-bottom: 0;
 }
 
-/* Contenedor del campo */
-.campo {
-  margin-bottom: 18px;
+/* Textarea: alto fijo y SIN redimensionar */
+.campo textarea {
+  min-height: 190px;
+  resize: none;
 }
-
-/* Errores debajo del campo */
-.error {
-  color: #d00000;
-  font-size: 14px;
-  margin-top: 4px;
-  display: block;
-}
-/* 🔥 SOLO afecta al error del textarea */
-.campo textarea + .error {
-  position: relative !important;   /* lo saca del overlay a la derecha */
-  top: 6px !important;             /* lo baja un poquito */
-  right: 0 !important;             /* lo alinea a la izquierda */
-  white-space: normal !important;  /* permite saltos de línea */
-  display: block !important;       /* lo coloca debajo */
-  text-align: left !important;
-}
-
-/* Borde rojo cuando hay error */
-.input-error {
-  border: 2px solid #d00000 !important;
-}
-
-/* Borde amarillo al hacer foco */
-.contacto-form input:focus,
-.contacto-form textarea:focus {
-  border-color: #f7c600;
-  box-shadow: 0 0 0 2px rgba(247, 198, 0, 0.25);
-}
-
 
 /* Botón ENVIAR */
 .contacto-form .btn-primario {
@@ -704,57 +670,46 @@ html {
   filter: brightness(1.05);
 }
 
-/* botón flotante WhatsApp */
-.whatsapp-btn {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 999;
+/* =========================
+   ERRORES FORMULARIO
+   ========================= */
+
+/* Estilo base del mensaje de error */
+.error {
+  color: #d00000;
+  font-size: 14px;
 }
 
-.whatsapp-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Nombre y Correo: error a la derecha, centrado en el campo */
+.campo input + .error {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
-/* Popup de éxito (por si lo usas) */
-.popup {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1000;
+/* Mensaje: error dentro del textarea, abajo a la derecha */
+.campo-mensaje textarea + .error {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  transform: none;
+  max-width: 40%;      /* se parte en dos líneas si es largo */
+  text-align: right;
+  white-space: normal;
 }
 
-.popup-content {
-  background: #ffffff;
-  padding: 1.8rem 2.2rem;
-  border-radius: 8px;
-  max-width: 380px;
-  text-align: center;
+/* Borde amarillo al foco */
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #f7c600;
+  box-shadow: 0 0 0 2px rgba(247, 198, 0, 0.25);
 }
 
-.popup-content h3 {
-  margin-bottom: 0.8rem;
-  color: var(--gris-oscuro);
-}
-
-.popup-content button {
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 4px;
-  border: none;
-  background: var(--amarillo);
-  font-weight: 600;
-  cursor: pointer;
+/* Borde rojo cuando hay error */
+.input-error {
+  border: 2px solid #d00000 !important;
 }
 
 /* =========================
@@ -822,4 +777,22 @@ html {
     grid-template-columns: 1fr;
   }
 }
- 
+ /* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.whatsapp-btn {
+  position: fixed;        /* flotante sobre toda la página */
+  right: 20px;            /* separación del borde derecho */
+  bottom: 20px;           /* separación del borde inferior */
+  width: 56px;            /* tamaño del botón */
+  height: 56px;
+  border-radius: 50%;     /* redondo */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;          /* por encima del mapa y demás */
+}
+
+.whatsapp-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

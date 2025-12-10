@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto – Maquinaria e Ingeniería Jargo</title>
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* ---- ERRORES A LA DERECHA ---- */
-    .campo {
-      position: relative;
-      margin-bottom: 22px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .campo .error {
-      position: absolute;
-      right: 10px;
-      top: 40px; 
-      font-size: 14px;
-      color: #d00000;
-      white-space: nowrap;
-      pointer-events: none;
-    }
-
-    /* Para textarea */
-    .campo textarea + .error {
-      top: 10px;
-    }
-
-    /* Input en error */
-    .input-error {
-      border: 2px solid #d00000 !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -91,12 +61,14 @@
                 <span class="error" id="error-correo"></span>
               </div>
 
-              <div class="campo">
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
-                <span class="error" id="error-mensaje"></span>
-              </div>
-
+          <div class="campo campo-mensaje">
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje"
+                      rows="5"
+                      placeholder="Cuéntanos cómo podemos ayudarte"
+                      required></textarea>
+            <span class="error" id="error-mensaje"></span>
+          </div>
 
           <!-- CONFIG FORM SUBMIT -->
           <input type="hidden" name="_subject" value="Nuevo mensaje desde la web JARGO">
